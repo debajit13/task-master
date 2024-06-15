@@ -82,7 +82,10 @@ const Auth = () => {
 
   return (
     <Row className='h-75 w-100 m-0'>
-      <Col sm={6} className='d-flex justify-content-center align-items-center'>
+      <Col
+        sm={6}
+        className='d-flex pt-3 justify-content-center align-items-center'
+      >
         <img
           src='https://firebasestorage.googleapis.com/v0/b/task-master-78640.appspot.com/o/discuss-talent-requirements.svg?alt=media&token=8a69b709-520c-42cb-a945-c0437f3feff6'
           alt='Login Image'
