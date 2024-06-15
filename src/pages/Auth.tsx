@@ -111,6 +111,7 @@ const Auth = () => {
               <Form.Group className='mb-2' controlId='formBasicEmail'>
                 <Form.Label>Username</Form.Label>
                 <Form.Control
+                  className='rounded-5'
                   type='text'
                   placeholder='Enter username'
                   value={username}
@@ -124,6 +125,7 @@ const Auth = () => {
             <Form.Group className='mb-2' controlId='formBasicEmail'>
               <Form.Label>Email address</Form.Label>
               <Form.Control
+                className='rounded-5'
                 type='email'
                 placeholder='Enter email'
                 value={email}
@@ -136,6 +138,7 @@ const Auth = () => {
             <Form.Group className='mb-4' controlId='formBasicPassword'>
               <Form.Label>Password</Form.Label>
               <Form.Control
+                className='rounded-5'
                 type='password'
                 minLength={6}
                 value={password}
@@ -157,7 +160,7 @@ const Auth = () => {
                 </>
               )}
             </p>
-            <Button variant='info' type='submit'>
+            <Button className='rounded-5' variant='info' type='submit'>
               {pathname === '/register' ? 'Register' : 'Login'}
             </Button>
           </Form>
