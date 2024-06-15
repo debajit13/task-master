@@ -1,4 +1,4 @@
-import { Button, Container, Form, Nav, Spinner } from 'react-bootstrap';
+import { Container, Form, Nav, Spinner } from 'react-bootstrap';
 import AddTaskModal from '../components/global/AddTaskModal';
 import useStore from '../store/store';
 import { useEffect, useState } from 'react';
