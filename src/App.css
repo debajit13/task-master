@@ -1,0 +1,10 @@
+#root {
+  background-color: #242424;
+  color: #fff;
+  height: 100%;
+}
+
+.form-check-input:checked {
+  background-color: #198754 !important;
+  border-color: #198754 !important;
+}
