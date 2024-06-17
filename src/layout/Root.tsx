@@ -29,7 +29,7 @@ const Root = () => {
   return (
     <>
       <AppHeader />
-      <main className='pb-4 h-100'>
+      <main className='pb-5 h-100'>
         <Outlet />
       </main>
       <ToastContainer />

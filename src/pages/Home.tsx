@@ -118,7 +118,9 @@ const Home = () => {
           {status.map((item) => (
             <Nav.Item key={item}>
               <Nav.Link
-                className={taskListStatus === item ? 'bg-info' : 'text-info'}
+                className={
+                  taskListStatus === item ? 'bg-info text-dark' : 'text-info'
+                }
                 eventKey={item}
               >
                 {item}
@@ -127,7 +129,7 @@ const Home = () => {
           ))}
         </Nav>
 
-        <section className='d-flex mb-4 justify-content-between align-items-baseline'>
+        <section className='d-flex justify-content-between align-items-baseline'>
           <Form.Group className='d-flex w-50'>
             {allLabels.length > 0 && (
               <Form.Select
@@ -152,29 +154,30 @@ const Home = () => {
             existingLabels={allLabels}
           />
         </section>
-
-        {isLoading ? (
-          <div className='text-center'>
-            <Spinner animation='border' variant='info'></Spinner>
-          </div>
-        ) : tasks.length > 0 ? (
-          tasks.map((task) => (
-            <TaskCard
-              allLabels={allLabels}
-              key={task?.id}
-              id={task?.id}
-              title={task?.title}
-              description={task?.description}
-              label={task?.label}
-              isImportant={task?.isImportant}
-              time={task?.time}
-              completed={task?.completed}
-              refreshTasksListHandler={getTasksHandler}
-            />
-          ))
-        ) : (
-          <p className='text-white text-center'>No data found</p>
-        )}
+        <section className='pb-5 mt-4'>
+          {isLoading ? (
+            <div className='text-center'>
+              <Spinner animation='border' variant='info'></Spinner>
+            </div>
+          ) : tasks.length > 0 ? (
+            tasks.map((task) => (
+              <TaskCard
+                allLabels={allLabels}
+                key={task?.id}
+                id={task?.id}
+                title={task?.title}
+                description={task?.description}
+                label={task?.label}
+                isImportant={task?.isImportant}
+                time={task?.time}
+                completed={task?.completed}
+                refreshTasksListHandler={getTasksHandler}
+              />
+            ))
+          ) : (
+            <p className='text-white text-center'>No data found</p>
+          )}
+        </section>
       </section>
     </Container>
   );
