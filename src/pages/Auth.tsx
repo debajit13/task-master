@@ -102,7 +102,7 @@ const Auth = () => {
   };
 
   return (
-    <Row className='h-75 w-100 m-0'>
+    <Row className='h-100 w-100 m-0'>
       <Col
         sm={6}
         className='d-flex pt-3 justify-content-center align-items-center'

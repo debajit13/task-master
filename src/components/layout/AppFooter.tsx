@@ -1,7 +1,9 @@
 const AppFooter = () => {
   return (
     <div className='text-center bg-info fixed-bottom'>
-      <p className='m-0 text-dark'>&copy; Debajit Mallick 2024</p>
+      <p className='m-0 text-dark'>
+        &copy; Debajit Mallick {new Date().getFullYear()}
+      </p>
     </div>
   );
 };
